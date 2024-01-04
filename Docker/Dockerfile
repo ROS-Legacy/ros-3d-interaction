@@ -31,3 +31,7 @@ RUN sed --in-place --expression \
       '$isource "$OVERLAY_WS/devel/setup.bash"' \
       /ros_entrypoint.sh
 
+RUN echo "source /ros_entrypoint.sh" >> /root/.bashrc
+
+CMD ["roscore"]
+
