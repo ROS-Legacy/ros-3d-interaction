@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-docker build -t ros-3d-interaction:indigo .
+docker build -t ghcr.io/ros-legacy/ros-3d-interaction:indigo-devel .
