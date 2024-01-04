@@ -25,4 +25,9 @@ RUN . /opt/ros/$ROS_DISTRO/setup.sh && \
 
 RUN . /opt/ros/$ROS_DISTRO/setup.sh && \
     catkin_make
-    
+
+ENV OVERLAY_WS $OVERLAY_WS
+RUN sed --in-place --expression \
+      '$isource "$OVERLAY_WS/devel/setup.bash"' \
+      /ros_entrypoint.sh
+
